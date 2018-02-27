@@ -14,6 +14,10 @@ import org.jetbrains.kotlin.pill.ArtifactElement.*
 import org.jetbrains.kotlin.pill.POrderRoot.*
 import java.io.File
 
+class PillLibraryContext() {
+    
+}
+
 class PArtifact(val artifactName: String, val outputDir: File, private val contents: ArtifactElement.Root) {
     fun render(context: PathContext) = xml("component", "name" to "ArtifactManager") {
         xml("artifact", "name" to artifactName) {
